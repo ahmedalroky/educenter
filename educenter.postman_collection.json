@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "b5139678-cbf6-4a07-aeec-abdefbe4717a",
+		"name": "educenter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6845982"
+	},
+	"item": [
+		{
+			"name": "Upload image",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Students Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MDQ1MzM5NSwianRpIjoiZGJhZTM3YmEtNzk2Zi00OGY1LTgwNTctMDA4OTc5NDliOTY2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjksImV4cCI6Ik1vbiwgMDMgQXByIDIwMjMgMTY6MzY6MzUgR01UIiwidXNlcl9pZCI6OSwidXNlcl90eXBlIjoic3R1ZGVudCJ9LCJuYmYiOjE2ODA0NTMzOTUsImV4cCI6MTY4MDQ1NDI5NX0.ScXChOMNdBFvpJUgR-PuUqCPSd9caTCJqjfvr_-5YG8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Students signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"zcool2@example.com\",\r\n    \"password\": \"12021995\",\r\n    \"phone_number\": \"555-1234\",\r\n    \"school\": \"Example School\",\r\n    \"age\": 18,\r\n    \"grade\": 12,\r\n    \"speciality\": \"Mathematics\",\r\n    \"level\": \"Intermediate\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/students/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"students",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students <ID>",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students classes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Classes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add Admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add teacher",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher classes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Teachers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add enrollment",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Edit enrollment",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get all enrollments",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET enrollments for class",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET enrollments for student",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
