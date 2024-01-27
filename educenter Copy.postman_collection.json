@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "6fd01303-1eeb-4bec-a91e-e1cd7828e01e",
+		"name": "educenter Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "6845982"
+	},
+	"item": [
+		{
+			"name": "Upload image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NTMyNSwianRpIjoiNjM5NmY0ZTktYzAyZS00MWJmLWIxN2ItNjcwYWQzNThjZjJmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTE6NDI6MDUgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoic3R1ZGVudCJ9LCJuYmYiOjE2OTY3NjUzMjUsImV4cCI6MTY5Njc2NjIyNX0.qyIZ6KxARsFpEHjzhIy6FF0AyJB4SQPRxH76nlkL4n0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/AiActive/Pictures/how-to-mint-an-nft.png"
+						}
+					]
+				},
+				"url": "http://localhost:5000/upload/image"
+			},
+			"response": []
+		},
+		{
+			"name": "Students Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"john.smith@example.com\",\"password\":\"123456\"}"
+				},
+				"url": "http://localhost:5000/students/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NTU1OCwianRpIjoiNDA4M2NlNDYtN2Q2Zi00YWVmLWEyMmItMjAxZDRjMGY4YTIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTE6NDU6NTggR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2NzY1NTU4LCJleHAiOjE2OTY3NjY0NTh9.lwi6vPtmoLtIiJFur7rPQMYPt5-rzumF24whf91u6Dg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/students"
+			},
+			"response": []
+		},
+		{
+			"name": "Students signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"zcool2@example.com\",\r\n    \"password\": \"12021995\",\r\n    \"phone_number\": \"555-1234\",\r\n    \"school\": \"Example School\",\r\n    \"age\": 18,\r\n    \"grade\": 12,\r\n    \"speciality\": \"Mathematics\",\r\n    \"level\": \"Intermediate\"\r\n}"
+				},
+				"url": "http://localhost:5000/students/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students <ID>",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NTU1OCwianRpIjoiNDA4M2NlNDYtN2Q2Zi00YWVmLWEyMmItMjAxZDRjMGY4YTIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTE6NDU6NTggR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2NzY1NTU4LCJleHAiOjE2OTY3NjY0NTh9.lwi6vPtmoLtIiJFur7rPQMYPt5-rzumF24whf91u6Dg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/students/1"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Students classes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5NjgzOTAyMywianRpIjoiNGM2NjYxMjYtMjJmMS00NmQ0LWJjOGQtNjEzOTRjMGM5Y2NiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDg6MTA6MjMgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2ODM5MDIzLCJleHAiOjE2OTY4Mzk5MjN9.d4IP5SwtbppwNeB_8PqxGSesbPAwS3BczsgxvyjxKeU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/students/1/classes"
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Classes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NTU1OCwianRpIjoiNDA4M2NlNDYtN2Q2Zi00YWVmLWEyMmItMjAxZDRjMGY4YTIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTE6NDU6NTggR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2NzY1NTU4LCJleHAiOjE2OTY3NjY0NTh9.lwi6vPtmoLtIiJFur7rPQMYPt5-rzumF24whf91u6Dg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/classes"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"johndoe@example.com\",\"password\":\"12021995\"}"
+				},
+				"url": "http://localhost:5000/admin/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NTU1OCwianRpIjoiNDA4M2NlNDYtN2Q2Zi00YWVmLWEyMmItMjAxZDRjMGY4YTIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTE6NDU6NTggR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2NzY1NTU4LCJleHAiOjE2OTY3NjY0NTh9.lwi6vPtmoLtIiJFur7rPQMYPt5-rzumF24whf91u6Dg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"hack\",\"email\":\"hack@email.com\",\"password\":\"123456\"}"
+				},
+				"url": "http://localhost:5000/admin/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Add teacher",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njg0MDUyMSwianRpIjoiZjMwNTc0YzMtNjBjYi00NzBlLTk5ZTMtOTQ3N2YwOWRlOWQ4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDg6MzU6MjEgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2ODQwNTIxLCJleHAiOjE2OTY4NDE0MjF9.frhblV-fM-MqMro7dHLY7b97oycgz12ZjuMc7n866Ms"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"article\": \"Introduction to Calculus\",\r\n        \"email\": \"james.1121@example.com\",\r\n        \"grades\": \"9-12\",\r\n        \"level\": \"Secondary\",\r\n        \"password\":\"testttt\",\r\n        \"location\": \"New York, NY\",\r\n        \"name\": \"James Johnson\",\r\n        \"phone_number\": \"555-4321\",\r\n        \"profile_picture\": \"https://example.com/profiles/james.jpg\",\r\n        \"school\": \"DEF University\"}"
+				},
+				"url": "http://localhost:5000/teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "update teacher",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njg0MDUyMSwianRpIjoiZjMwNTc0YzMtNjBjYi00NzBlLTk5ZTMtOTQ3N2YwOWRlOWQ4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDg6MzU6MjEgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2ODQwNTIxLCJleHAiOjE2OTY4NDE0MjF9.frhblV-fM-MqMro7dHLY7b97oycgz12ZjuMc7n866Ms"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"article\": \"Introduction to Calculus\",\r\n        \"email\": \"james.1121@example.com\",\r\n        \"grades\": \"9-12\",\r\n        \"level\": \"Secondary\",\r\n        \"password\":\"testttt\",\r\n        \"location\": \"New York, NY\",\r\n        \"name\": \"James Johnson\",\r\n        \"phone_number\": \"555-4321\",\r\n        \"profile_picture\": \"https://example.com/profiles/james.jpg\",\r\n        \"school\": \"DEF University\"}"
+				},
+				"url": "http://localhost:5000/teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"james.11@example.com\",\"password\":\"testttt\"}"
+				},
+				"url": "http://localhost:5000/teachers/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teacher classes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NjcyNiwianRpIjoiM2QxMGUxMDgtMzY4OC00NWM0LTk5YzQtZmE0ZWZlMThmMDY4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjExLCJleHAiOiJNb24sIDA5IE9jdCAyMDIzIDEyOjA1OjI2IEdNVCIsInVzZXJfaWQiOjExLCJ1c2VyX3R5cGUiOiJ0ZWFjaGVyIn0sIm5iZiI6MTY5Njc2NjcyNiwiZXhwIjoxNjk2NzY3NjI2fQ.5BFB2q_009pvj0syMrAUqQzfcar5VSQBheWEdd5Yzvs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/teachers/11/classes"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/teachers"
+			},
+			"response": []
+		},
+		{
+			"name": "Add enrollment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njg0MDg3NSwianRpIjoiMWMwMTZiMDYtZWE5ZC00YzMwLWJmZWUtMmYxZDNlZWRjZDZjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjExLCJleHAiOiJUdWUsIDEwIE9jdCAyMDIzIDA4OjQxOjE1IEdNVCIsInVzZXJfaWQiOjExLCJ1c2VyX3R5cGUiOiJ0ZWFjaGVyIn0sIm5iZiI6MTY5Njg0MDg3NSwiZXhwIjoxNjk2ODQxNzc1fQ.4pS4mFkx6SU9sz2LEIxnD1JVjh6MFTgz5Qx4VqhTHSk"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"student_id\":1,\"class_id\": 2,\r\n        \"enrollment_date\": \"2023-04-01\",\r\n        \"enrollment_type\": \"exam\",\r\n        \"exam_score\": 90,\r\n        \"grade\": \"C\",\r\n        \"homework_score\": 85}"
+				},
+				"url": "http://localhost:5000/enrollments"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit enrollment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njg0Mjk5NSwianRpIjoiMzQyYzVhM2YtNzYwYS00OWQ5LTlhMDYtNjg5NmMwYTMxNjFkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjIsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDk6MTY6MzUgR01UIiwidXNlcl9pZCI6MiwidXNlcl90eXBlIjoidGVhY2hlciJ9LCJuYmYiOjE2OTY4NDI5OTUsImV4cCI6MTY5Njg0Mzg5NX0.3KX7sFaP7KXN9eBQ_Q-9R9YppMDnF1zkBt4EN9-a69I"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":2,\"student_id\":1,\"class_id\": 2,\r\n        \"enrollment_date\": \"2023-04-01\",\r\n        \"enrollment_type\": \"exam\",\r\n        \"exam_score\": 100,\r\n        \"grade\": \"D\",\r\n        \"homework_score\": 85}"
+				},
+				"url": "http://localhost:5000/enrollments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all enrollments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njg0MjIyMywianRpIjoiOTJlYmMxM2ItMzdiMy00MWIzLTk1ZmQtMjgwZjVhMTU1ZjQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDk6MDM6NDMgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2ODQyMjIzLCJleHAiOjE2OTY4NDMxMjN9.fBgOJTmoxr_IqRRIe6D4rEBl2LGrfnAhWgxbuCO8gsQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/enrollments"
+			},
+			"response": []
+		},
+		{
+			"name": "GET enrollments for class",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5Njc2NjU2NCwianRpIjoiYzNkNDEwNDYtNGM0OC00NDhjLWJiZWQtNWVjNGQyMTYwOWU2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6Ik1vbiwgMDkgT2N0IDIwMjMgMTI6MDI6NDQgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2NzY2NTY0LCJleHAiOjE2OTY3Njc0NjR9.b9Y9z0DhLjVeo3r8DWFsnyZOeoqxp6iyBEOLscC6jMI"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/enrollments?class_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"enrollments"
+					],
+					"query": [
+						{
+							"key": "class_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET enrollments for student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5NjgzOTAyMywianRpIjoiNGM2NjYxMjYtMjJmMS00NmQ0LWJjOGQtNjEzOTRjMGM5Y2NiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJzdWIiOjEsImV4cCI6IlR1ZSwgMTAgT2N0IDIwMjMgMDg6MTA6MjMgR01UIiwidXNlcl9pZCI6MSwidXNlcl90eXBlIjoiYWRtaW4ifSwibmJmIjoxNjk2ODM5MDIzLCJleHAiOjE2OTY4Mzk5MjN9.d4IP5SwtbppwNeB_8PqxGSesbPAwS3BczsgxvyjxKeU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/enrollments?student_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"enrollments"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
