@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2023 at 02:11 PM
+-- Generation Time: Jan 27, 2024 at 07:55 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -105,7 +105,14 @@ INSERT INTO `enrollment` (`id`, `student_id`, `class_id`, `enrollment_date`, `gr
 (1, 1, 2, '2023-04-01', 'D', 90, 85, 'exam'),
 (2, 2, 2, '2023-04-01', 'C', 90, 85, 'exam'),
 (3, 1, 2, '2023-04-01', 'C', 90, 85, 'exam'),
-(4, 2, 2, '2023-04-01', 'C', 90, 85, 'exam');
+(4, 2, 2, '2023-04-01', 'C', 90, 85, 'exam'),
+(5, 2, 2, '2023-04-01', 'C', 90, 85, 'exam'),
+(6, 2, 2, '2023-04-01', 'C', 90, 85, 'exam'),
+(7, 2, 2, '2023-04-01', 'C', 90, 85, 'exam'),
+(9, 2, 1, '2023-04-01', 'C', 90, 85, 'exam'),
+(10, 2, 3, '2023-04-01', 'C', 90, 85, 'exam'),
+(12, 2, 3, '2023-04-01', 'C', 90, 85, 'exam'),
+(13, 2, 3, '2023-04-01', 'C', 90, 85, 'exam');
 
 -- --------------------------------------------------------
 
@@ -264,7 +271,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `classes`
@@ -276,7 +283,7 @@ ALTER TABLE `classes`
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `students`
