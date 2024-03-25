@@ -345,10 +345,10 @@ def signup():
     name = request.json.get('name', '').strip()
     email = request.json.get('email', '').strip()
     password = request.json.get('password', '').strip()
-
+    phone_number = request.json.get('phone_number', '').strip()
     # Check if any of the required fields are empty
-    if not name or not email or not password:
-        return jsonify(message='Name, email, and password are required'), 400
+    if not name or not email or not password or not phone_number:
+        return jsonify(message='Name, email, phone_number, and password are required'), 400
 
     # Check if the email is a valid email format
     if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
@@ -357,7 +357,6 @@ def signup():
     # Check if the password meets the minimum requirements
     if len(password) < 8:
         return jsonify(message='Password must be at least 8 characters'), 400
-
     name = request.json.get('name')
     email = request.json.get('email')
     password = request.json.get('password')
@@ -366,6 +365,7 @@ def signup():
     age = request.json.get('age')
     grade = request.json.get('grade')
     speciality = request.json.get('speciality')
+    birthday = request.json.get('birthday')
 
     # check if the user already exists
     student = session.query(Student).filter_by(email=email).first()
@@ -381,7 +381,8 @@ def signup():
         school=school,
         age=age,
         grade=grade,
-        speciality=speciality
+        speciality=speciality,
+        birthday=birthday
     )
 
     # add the student to the database
@@ -399,7 +400,8 @@ def signup():
             'school': new_student.school,
             'age': new_student.age,
             'grade': new_student.grade,
-            'speciality': new_student.speciality
+            'speciality': new_student.speciality,
+            'birthday':new_student.birthday
         }
     }), 201
 

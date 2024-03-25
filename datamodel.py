@@ -41,8 +41,8 @@ class Student(Base):
     email = Column(String(100), unique=True, nullable=False)
     speciality = Column(String(50))
     level = Column(String(20))
-    password = Column(String(99),nullable=False)
-
+    password = Column(String(99), nullable=False)
+    birthday = Column(Date) 
     classes = relationship('Class', secondary='student_classes', back_populates='students')
 
 
